@@ -18,7 +18,7 @@ public class Main {
             //애초에 입력을 받을때 0번 인덱스를 쓰지않고 1번부터 쓴다.
 
             for (int j = 0; j < 2; j++){
-                for (int k = 1; k < n; k++){
+                for (int k = 1; k <= n; k++){
                     value[j][k] = scn.nextInt();
                 }
             }
@@ -31,7 +31,7 @@ public class Main {
             //dp[0][3] 첫번째 행의 세번째 열을 선택했을때 최대값 200
             //dp[1][3] 두번째 행의 세번째 열을 선택했을때 최대값 110일것 같지만 아님
 
-            for (int k = 2; k < n; k++){
+            for (int k = 2; k <= n; k++){
                 dp[0][k] = Math.max(dp[1][k-1], dp[1][k-2])+value[0][k];
                 dp[1][k] = Math.max(dp[0][k-1], dp[0][k-2])+value[1][k];
             }
