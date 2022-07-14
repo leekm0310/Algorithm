@@ -6,10 +6,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int totalCase = Integer.parseInt(br.readLine());
 
-        TreeMap<Integer, Integer> treeMap = new TreeMap();
 
         for (int j = 0; j < totalCase; j++) {
             int testcase = Integer.parseInt(br.readLine());
+            TreeMap<Integer, Integer> treeMap = new TreeMap();
 
             for (int i = 0; i < testcase; i++) {
                 String[] commandLine = br.readLine().split(" ");
@@ -18,8 +18,8 @@ public class Main {
 
                 if (command == 'I') {
                     treeMap.put(number, treeMap.getOrDefault(number, 0) + 1);
-                } else if (command == 'D') {
-                    if (treeMap.isEmpty()) {
+                } else {
+                    if (treeMap.size() == 0) {
                         continue;
                     }
 
