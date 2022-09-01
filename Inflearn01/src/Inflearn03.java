@@ -5,13 +5,16 @@ public class Inflearn03 {
         Scanner scn = new Scanner(System.in);
         String str = scn.nextLine();
         String[] split = str.split(" ");
-        int answer = 0;
+        int a = Integer.MIN_VALUE;
+        String result = "";
 
-        for (int i = 0; i < split.length; i++) {
-            if (split[answer].length() < split[i].length()) {
-                answer = i;
+        for (String s : split) {
+            int length = s.length();
+            if (length > a) {
+                a = length;
+                result = s;
             }
         }
-        System.out.println(split[answer]);
+        System.out.println(result);
     }
 }
