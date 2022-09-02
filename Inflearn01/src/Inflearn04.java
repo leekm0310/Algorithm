@@ -4,12 +4,13 @@ public class Inflearn04 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int testcase = scn.nextInt();
-        for (int i = 0; i <= testcase; i++) {
-            String word = scn.next();
-            for (int j = word.length() - 1; j >= 0; j--) {
-                System.out.print(word.charAt(j));
-            }
-            System.out.println();
+        String[] arr = new String[testcase];
+        for (int i = 0; i < testcase; i++) {
+            arr[i] = scn.next();
+        }
+        for (String s : arr) {
+            String s1 = new StringBuilder(s).reverse().toString();
+            System.out.println(s1);
         }
     }
 }
