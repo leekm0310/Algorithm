@@ -1,17 +1,17 @@
 import java.util.Scanner;
-//found7 time study Yduts emit 7Dnuof
+
 public class Inflearn08 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         String line = scn.nextLine().toLowerCase();
-        char[] arr = line.toCharArray();
+        String original = line.replaceAll("[^a-z]", "");
+        String reversed = new StringBuilder(original).reverse().toString();
 
-        for (int i = 0; i < arr.length / 2; i++) {
-            if (Character.isAlphabetic(arr[i]) && (arr[i] != arr[arr.length-i-1])) {
-                System.out.println("NO");
-                return;
-            }
+
+        if (original.equals(reversed)) {
+            System.out.println("YES");
+            return;
         }
-        System.out.println("YES");
+        System.out.println("NO");
     }
 }
