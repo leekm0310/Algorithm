@@ -12,17 +12,17 @@ public class Inflearn33 {
             arr[i] = scn.nextInt();
         }
 
-        int max = 0;
         int total = 0;
-        for (int i = 0; i < n - k; i++) {
-            for (int j = i; j < i + k; j++) {
-                total += arr[j];
-                if (total > max) {
-                    max = total;
-                }
-            }
+        for (int i = 0; i < k; i++) {
+            total += arr[i];
+        }
+        int max = total;
 
-            total = 0;
+        for (int i = k; i < n; i++) {
+            total = total + arr[i] - arr[i-k];
+            if (total > max) {
+                max = total;
+            }
         }
         System.out.println(max);
     }
