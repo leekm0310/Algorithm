@@ -11,10 +11,7 @@ public class Inflearn52 {
         for (int i = 0; i < arr.length; i++) {
 
             if (arr[i].equals(")")) {
-                while (!stack.peek().equals("(")) {
-                    stack.pop();
-                }
-                stack.pop();
+                while (!stack.pop().equals("("));
             } else {
                 stack.push(arr[i]);
             }
