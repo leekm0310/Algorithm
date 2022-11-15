@@ -4,8 +4,8 @@ public class Inflearn81 {
     static String answer = "NO";
     static int n = 0;
     static int total = 0;
-    static boolean flag = false;
-    public static void DFS(int L, int sum, int[] arr) {
+    boolean flag = false;
+    public void DFS(int L, int sum, int[] arr) {
         if (flag) {
             return;
         }
@@ -24,15 +24,16 @@ public class Inflearn81 {
     }
 
     public static void main(String[] args) {
+        Inflearn81 I = new Inflearn81();
         Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
+        n = scn.nextInt();
         int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
             arr[i] = scn.nextInt();
             total += arr[i];
         }
-        DFS(0,0,arr);
+        I.DFS(0, 0, arr);
         System.out.println(answer);
     }
 }
