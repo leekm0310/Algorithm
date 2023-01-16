@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_07 {
     public String solution(String[] seoul) {
         int answer = 0;

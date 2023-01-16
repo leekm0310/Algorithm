@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_08 {
     public int solution(int[] absolutes, boolean[] signs) {
         int answer = 0;

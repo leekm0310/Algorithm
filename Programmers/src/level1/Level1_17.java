@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_17 {
     public static int[] solution(int n, int m) {
         int[] answer = new int[2];

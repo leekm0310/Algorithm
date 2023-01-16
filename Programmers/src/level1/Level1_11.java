@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_11 {
     public String solution(int n) {
         StringBuffer sb = new StringBuffer();

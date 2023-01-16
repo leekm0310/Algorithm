@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_06 {
     public static int solution(int n) {
         int answer = 0;

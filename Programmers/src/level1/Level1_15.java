@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_15 {
     public static boolean solution(String s) {
         boolean answer = false;

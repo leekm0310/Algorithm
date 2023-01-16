@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_16 {
     public long solution(int price, int money, int count) {
         long answer = -1;

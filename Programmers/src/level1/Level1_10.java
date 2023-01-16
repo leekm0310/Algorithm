@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_10 {
     public static String solution(String s) {
         String answer = "";

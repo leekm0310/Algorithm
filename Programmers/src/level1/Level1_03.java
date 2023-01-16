@@ -1,3 +1,5 @@
+package level1;
+
 public class Level1_03 {
     public static long solution(long n) {
         long answer = -1;
