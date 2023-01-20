@@ -1,17 +1,23 @@
 package Level2;
 
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.PriorityQueue;
 
 public class Level2_03 {
     public static int solution(int[] A, int[] B) {
         int answer = 0;
-        Arrays.sort(A);
-        Integer[] b = Arrays.stream(B).boxed().toArray(Integer[]::new);
-        Arrays.sort(b, Collections.reverseOrder());
+        PriorityQueue<Integer> a = new PriorityQueue<>();
+        PriorityQueue<Integer> b = new PriorityQueue<>(Collections.reverseOrder());
+
         for (int i = 0; i < A.length; i++) {
-            answer += A[i] * b[i];
+            a.add(A[i]);
+            b.add(B[i]);
         }
+
+        while (!a.isEmpty()) {
+            answer += a.poll() * b.poll();
+        }
+
         return answer;
     }
 
@@ -19,5 +25,6 @@ public class Level2_03 {
         int[] a = {1, 4, 2};
         int[] b = {5, 4, 4};
         System.out.println(solution(a, b));
+
     }
 }
