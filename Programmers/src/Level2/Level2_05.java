@@ -7,13 +7,17 @@ public class Level2_05 {
         boolean answer = false;
         Stack<Character> stack = new Stack<>();
 
+        if (s.charAt(0) == ')' || s.charAt(s.length() - 1) == '(') {
+            return false;
+        }
         for (int i = 0; i < s.length(); i++) {
-            stack.push(s.charAt(i));
-            if (stack.size() >= 2) {
-                if (stack.peek().equals(')') && stack.elementAt(stack.size() - 2).equals('(')) {
-                    stack.pop();
-                    stack.pop();
+            if (s.charAt(i) == '(') {
+                stack.push(s.charAt(i));
+            } else {
+                if (stack.isEmpty()) {
+                    return false;
                 }
+                stack.pop();
             }
         }
 
