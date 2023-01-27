@@ -2,13 +2,18 @@ package Level2;
 
 public class Level2_06 {
     public int solution(int n) {
-        if (n == 0) {
-            return 0;
+        int[] answer = new int[n + 1];
+
+        for (int i = 0; i <= n; i++) {
+            if (i == 0) {
+                answer[i] = 0;
+            } else if (i == 1) {
+                answer[i] = 1;
+            } else {
+                int sum = answer[i - 2] + answer[i - 1];
+                answer[i] = sum % 1234567;
+            }
         }
-        if (n == 1 || n == 2) {
-            return 1;
-        } else {
-            return solution(n - 1) + solution(n - 2);
-        }
+        return answer[n];
     }
 }
